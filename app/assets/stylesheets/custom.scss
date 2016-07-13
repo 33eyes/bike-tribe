@@ -5,3 +5,12 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+
+
+body {
+    //    background-color: blue;
+    background-image: asset-data-url("20160623_130730_crop1_lightBlue_blur3.jpg");
+//    background-image: asset-data-url("20160623_130730_crop1_purple_blur1.jpg");
+    background-size: cover;
+}
