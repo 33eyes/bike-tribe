@@ -13,6 +13,9 @@
               <div class="col-sm-4">
                 <%= link_to user do %>
                   <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                  <% if user.plan_id == 2%>
+                    <span class="label label-danger">PREMIUM</span>
+                  <% end %>
                 <% end %>
                 <p>Blurby blurb.</p>
               </div>
