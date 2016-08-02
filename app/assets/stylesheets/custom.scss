@@ -26,7 +26,7 @@ body {
 }
 
 .padded-wrapper {
-    padding-top: 5em;
+    padding-top: 3.5em;
 }
 
 .navbar-custom {
@@ -40,4 +40,49 @@ body {
 
 .user-page-header {
   background-color: #dcccff;
+  
+  padding-bottom: 1.5em;
 }
+
+.social-media-group {
+    margin-top: 1em;
+    margin-left: 0.5em;
+    font-size: 1.5em;
+}
+
+
+
+/*
+.btn-edit {
+	background-color:#bddbfa;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+//	font-style: italic;
+position:absolute; 
+top:0; 
+right:0;
+}
+.btn-edit:hover {
+	background-color:#80b5ea;
+}
+.btn-edit:active {
+	position:relative;
+	top:1px;
+}
+
+.col-btn-corner {
+//    padding-right: 0;
+//    padding-left: 2.1em;
+}
+
+.well {
+  position: relative;
+}
+*/

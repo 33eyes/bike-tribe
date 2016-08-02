@@ -1,6 +1,9 @@
 .user-show-avatar {
-  height: 128px;
-  width: 128px;
+    height: 100px;
+    width: 100px;
+    border: solid white 0.3em;
+    border-radius: 50%;
+    margin-top: 1em;
 }
 
 .user-index-avatar {
