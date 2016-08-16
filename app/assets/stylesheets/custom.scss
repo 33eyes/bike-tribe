@@ -8,35 +8,38 @@
 
 
 
-body {
-//  background-color: #96F587;
-//  background-color: #FFFC8C;
-//  background-color: #EDD3F3;
-//  background-color: #dcccff;
+// Bootstrap overrides
 
-//    background-image: asset-data-url("20160623_130730_crop1_lightBlue_blur3.jpg");
-//    background-image: asset-data-url("20160623_130730_crop1_purple_blur1.jpg");
-//    background-size: cover;
+// Override default button on-hover font color
+.btn:hover, .btn:focus, .btn.focus {
+  color: #fff;
 }
 
+// Navbar links list text color
+.navbar-inverse .navbar-nav > li > a {
+    color: #8AD4BE;
+}
+
+// Navbar brand text color
+.navbar-inverse .navbar-brand {
+    color: #8AD4BE;
+}
+
+
+
+
+
+
+
+
+/*
+// OLD 
 .alert-notice {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
 
-.padded-wrapper {
-    padding-top: 3.5em;
-}
-
-.navbar-custom {
-  background-color: #4d3319;
-}
-
-.container-fluid-custom {
-    padding-left: 25px;
-    padding-right: 25px;
-}
 
 .user-page-header {
   background-color: #dcccff;
@@ -50,39 +53,4 @@ body {
     font-size: 1.5em;
 }
 
-
-
-/*
-.btn-edit {
-	background-color:#bddbfa;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 12px;
-	text-decoration:none;
-//	font-style: italic;
-position:absolute; 
-top:0; 
-right:0;
-}
-.btn-edit:hover {
-	background-color:#80b5ea;
-}
-.btn-edit:active {
-	position:relative;
-	top:1px;
-}
-
-.col-btn-corner {
-//    padding-right: 0;
-//    padding-left: 2.1em;
-}
-
-.well {
-  position: relative;
-}
 */

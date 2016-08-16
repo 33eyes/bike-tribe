@@ -1,0 +1,41 @@
+
+// Custom Bootstrap buttons
+
+// Green button
+.btn-green {
+  color: #fff;
+  background-color: #00AF7A;
+  border-color: #00996b;
+}
+.btn-green:focus, .btn-green.focus {
+  color: #fff;
+  background-color: #007A55;
+  border-color: #004732;
+}
+.btn-green:hover {
+  color: #fff;
+  background-color: #007A55;
+  border-color: #006647;
+}
+.btn-green:active, .btn-green.active, .open > .btn-green.dropdown-toggle {
+  color: #fff;
+  background-color: #007A55;
+  border-color: #006647;
+}
+.btn-green:active:hover, .btn-green:active:focus, .btn-green:active.focus, .btn-green.active:hover, .btn-green.active:focus, .btn-green.active.focus, .open > .btn-green.dropdown-toggle:hover, .open > .btn-green.dropdown-toggle:focus, .open > .btn-green.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #006647;
+  border-color: #004732;
+}
+.btn-green:active, .btn-green.active, .open > .btn-green.dropdown-toggle {
+  background-image: none;
+}
+.btn-green.disabled:hover, .btn-green.disabled:focus, .btn-green.disabled.focus, .btn-green[disabled]:hover, .btn-green[disabled]:focus, .btn-green[disabled].focus, fieldset[disabled] .btn-green:hover, fieldset[disabled] .btn-green:focus, fieldset[disabled] .btn-green.focus {
+  background-color: #00AF7A;
+  border-color: #00996b;
+}
+.btn-green .badge {
+  color: #00AF7A;
+  background-color: #fff;
+}
+

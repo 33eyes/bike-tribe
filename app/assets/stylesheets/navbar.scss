@@ -1,0 +1,16 @@
+
+// Navbar color
+.navbar-custom {
+  background-color: #004B25;
+}
+
+// Top padding needed to offset for fixed navbar
+.padded-wrapper {
+    padding-top: 3.5em;
+}
+
+// Side offsets for fluid navbar
+.container-fluid-custom {
+    padding-left: 25px;
+    padding-right: 25px;
+}
