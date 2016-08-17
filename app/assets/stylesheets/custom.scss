@@ -17,19 +17,30 @@
 
 // Navbar links list text color
 .navbar-inverse .navbar-nav > li > a {
-    color: #8AD4BE;
+  color: #8AD4BE;
 }
 
 // Navbar brand text color
 .navbar-inverse .navbar-brand {
-    color: #8AD4BE;
+  color: #8AD4BE;
 }
 
+// Well colors
+.well {
+  background-color: #daf1ea;
+  border: 1px solid #b5e3d5;
+}
+.well.well-inverse {
+  background-color: #fff;
+  border: 1px solid #b5e3d5;
+  box-shadow: 1px 1px 3px #daf1ea;
+}
 
-
-
-
-
+// Timestamp styles
+.timestamp {
+  margin: 0;
+  color: #777;
+}
 
 
 /*

@@ -13,3 +13,14 @@
 .well.grey-bg {
   background-color: lightgrey;
 }
+
+
+.menu-item-bar {
+    position: relative;
+}
+
+.menu-item-bar .btn-green {
+    position: absolute;
+    right: 0;
+    top: -2px;
+}

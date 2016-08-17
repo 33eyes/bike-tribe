@@ -1,20 +1,59 @@
-
 <div class="row user-page-header">
-  <div class="col-md-4">
-    <div class="row">
-      <div class="col-md-3">
-        <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
-        <br>
-        <p class="social-media-group">
-          <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-          <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-          <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-        </p>
+    
+       <div class="col-md-2 col-md-offset-2">
+        <div class="text-center">
+          <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
+        </div>
+        <div class="well well-menu-vert">
+          <ul class="menu-vert" id="profile-menu">
+            <li class="menu-item-profile selected-bkgd">Profile</li>
+            <li class="menu-item-contact">Contact</li>
+            <li class="menu-item-inventory">Inventory</li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-4">
         <h1><strong><%= @user.profile.first_name %>
         <%= @user.profile.last_name %></strong></h1>
+        
+        <div class="profile-menu-items">
+          
+          <div class="menu-item-profile">
+            <div class="menu-item-bar">
+              <h2>About</h2>
+              <% if current_user.profile %>
+                <%= link_to "Edit", edit_user_profile_path(current_user), class: 'btn btn-green' %>
+              <% end %>
+            </div>
+            <div class="well well-inverse">
+              <p><%= @user.profile.description %></p>
+              <p class="timestamp">Joined <%= @user.profile.created_at.strftime("%B %d, %Y") %></p>
+            </div>
+            
+            <h2>Interests</h2>
+            <div class="well well-inverse">
+              <h3>Expert</h3>
+              <h3>Intermediate</h3>
+              <h3>Beginner</h3>
+            </div>
+            
+          </div>
+          
+          <div class="menu-item-contact hide-menu-item">
+            <p class="social-media-group">
+              <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+              <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+              <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            </p>
+          </div>
+          
+          <div class="menu-item-inventory hide-menu-item">
+            <p class="inventory-group">
+              Inventory placeholder
+            </p>
+          </div>
+          
+        </div>
       </div>
-    </div>
-  </div>
+    
 </div>
