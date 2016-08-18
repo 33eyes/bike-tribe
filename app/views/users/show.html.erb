@@ -32,9 +32,26 @@
             
             <h2>Interests</h2>
             <div class="well well-inverse">
-              <h3>Expert</h3>
-              <h3>Intermediate</h3>
-              <h3>Beginner</h3>
+              <% @interest_groups.reverse.each_with_index do |interest_group, ind| %>
+                <% if ind == 0 then %>
+                  <h3 class="well-segment-bar">Expert</h3>
+                <% elsif ind == 1 then %>
+                  <h3 class="well-segment-bar">Intermediate</h3>
+                <% else %>
+                  <h3 class="well-segment-bar">Beginner</h3>
+                <% end %>
+                
+                <% if not interest_group.empty? then %>
+                  
+                  <% interest_group.each do |interest| %>
+                    
+                    <h4><%= interest.topic.topic_name %></h4>
+                    <p><%= interest.interest_description %></p>
+                  <% end %>
+                  
+                <% end %>
+                
+              <% end %>
             </div>
             
           </div>

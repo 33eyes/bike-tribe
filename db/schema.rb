@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718033028) do
+ActiveRecord::Schema.define(version: 20160818030105) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20160718033028) do
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "topic_id"
+    t.integer  "user_id"
+    t.text     "interest_description"
+    t.integer  "experience_level"
   end
 
   create_table "plans", force: :cascade do |t|
@@ -39,6 +48,12 @@ ActiveRecord::Schema.define(version: 20160718033028) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "topic_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

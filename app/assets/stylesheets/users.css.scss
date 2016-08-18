@@ -15,12 +15,22 @@
 }
 
 
+// Position the edit button
 .menu-item-bar {
     position: relative;
 }
-
 .menu-item-bar .btn-green {
     position: absolute;
     right: 0;
     top: -2px;
+}
+
+
+// Interests experience levels styles
+div.well-inverse > h3.well-segment-bar {
+  background-color: #37D183;
+  color: white;
+  margin: 0px -20px;
+  margin-top: 20px;
+  padding: 7px;
 }
