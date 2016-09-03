@@ -26,7 +26,6 @@ h2 {
 
 .interest-bar {
   margin: 0;
-  position: relative;
   
   h4 {
     display: inline-flex;
@@ -38,14 +37,13 @@ h2 {
   
   a {
     display: none;
-    position: absolute;
-    right: 0;
-    top: -2px;
+    float: right;
     padding: 0;
-    padding-left: 2px;
+    padding-left: 5px;
     margin-top: 1px;
     margin-bottom: 2px;
     color: white;
+    font-size: 11px;
   }
 }
 
