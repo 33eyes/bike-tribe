@@ -31,6 +31,7 @@
             </div>
             
             <h2>Interests</h2>
+            <div class="interests-container">
               <% @interest_groups.reverse.each_with_index do |interest_group, ind| %>
                 <% if ind == 0 then %>
                   <div class="expert-interests">
@@ -59,7 +60,9 @@
                           beginner
                         <% end %>
                       </div>
+                      <% if not interest.interest_description.nil? then %>
                       <p class="interest-description"><%= interest.interest_description %></p>
+                      <% end %>
                     </div>
                   <% end %>
                   
@@ -67,7 +70,7 @@
                   </div>
                 
               <% end %>
-            
+            </div>
           </div>
           
           <div class="menu-item-contact hide-menu-item">

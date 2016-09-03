@@ -19,6 +19,8 @@ h2 {
 /* General interest item box styles */
 .interest {
   display: inline-block;
+  vertical-align: top;
+  margin: 4px;
   border: 3px solid grey;
   padding: 0;
   border-radius: 5px;
@@ -61,30 +63,38 @@ h2 {
   border-radius: 4px;
   padding: 4px;
   margin: 0;
+  max-width: 250px;
 }
 
 
 /* Expert-level interest item box styles */
 .expert-interests {
+  display: inline-block;
   
+  .interest {
+    background-color: $expert-color;
+    border-color: $expert-color;
+  }
 }
 
 
 /* Intermediate-level interest item box styles */
 .intermediate-interests {
+  display: inline-block;
+  
   .interest {
     background-color: $intermediate-color;
     border-color: $intermediate-color;
-  }
-  .interest-bar {
-  }
-  
-  .interest-exp-level {
   }
 }
 
 
 /* Beginner-level interest item box styles */
 .beginner-interests {
+  display: inline-block;
   
+  .interest {
+    background-color: $beginner-color;
+    border-color: $beginner-color;
+  }
 }
