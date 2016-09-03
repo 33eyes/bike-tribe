@@ -1,36 +1,92 @@
+@import 'colors';
+
+/* Avatar styles */
 .user-show-avatar {
-    height: 100px;
-    width: 100px;
-    border: solid white 0.3em;
-    border-radius: 50%;
-    margin-top: 1em;
-}
-
-.user-index-avatar {
+  height: 100px;
+  width: 100px;
+  border: solid white 0.3em;
   border-radius: 50%;
-}
-
-.well.grey-bg {
-  background-color: lightgrey;
+  margin-top: 1em;
 }
 
 
-// Position the edit button
-.menu-item-bar {
-    position: relative;
+/* Section titles styles */
+h2 {
+  color: $dark-tone-1;
 }
-.menu-item-bar .btn-green {
+
+
+/* General interest item box styles */
+.interest {
+  display: inline-block;
+  border: 3px solid grey;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.interest-bar {
+  margin: 0;
+  position: relative;
+  
+  h4 {
+    display: inline-flex;
+    margin: 0;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  
+  a {
+    display: none;
     position: absolute;
     right: 0;
     top: -2px;
+    padding: 0;
+    padding-left: 2px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    color: white;
+  }
+}
+
+.interest-exp-level {
+  display: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 2px;
+}
+
+.interest-description {
+  display: none;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0;
 }
 
 
-// Interests experience levels styles
-div.well-inverse > h3.well-segment-bar {
-  background-color: #37D183;
-  color: white;
-  margin: 0px -20px;
-  margin-top: 20px;
-  padding: 7px;
+/* Expert-level interest item box styles */
+.expert-interests {
+  
+}
+
+
+/* Intermediate-level interest item box styles */
+.intermediate-interests {
+  .interest {
+    background-color: $intermediate-color;
+    border-color: $intermediate-color;
+  }
+  .interest-bar {
+  }
+  
+  .interest-exp-level {
+  }
+}
+
+
+/* Beginner-level interest item box styles */
+.beginner-interests {
+  
 }

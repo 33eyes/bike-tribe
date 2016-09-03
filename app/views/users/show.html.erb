@@ -3,6 +3,9 @@
        <div class="col-md-2 col-md-offset-2">
         <div class="text-center">
           <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
+          <% if current_user.profile %>
+            <%= link_to "Edit", edit_user_profile_path(current_user), class: 'btn btn-green' %>
+          <% end %>
         </div>
         <div class="well well-menu-vert">
           <ul class="menu-vert" id="profile-menu">
@@ -21,9 +24,6 @@
           <div class="menu-item-profile">
             <div class="menu-item-bar">
               <h2>About</h2>
-              <% if current_user.profile %>
-                <%= link_to "Edit", edit_user_profile_path(current_user), class: 'btn btn-green' %>
-              <% end %>
             </div>
             <div class="well well-inverse">
               <p><%= @user.profile.description %></p>
@@ -31,28 +31,42 @@
             </div>
             
             <h2>Interests</h2>
-            <div class="well well-inverse">
               <% @interest_groups.reverse.each_with_index do |interest_group, ind| %>
                 <% if ind == 0 then %>
-                  <h3 class="well-segment-bar">Expert</h3>
+                  <div class="expert-interests">
                 <% elsif ind == 1 then %>
-                  <h3 class="well-segment-bar">Intermediate</h3>
+                  <div class="intermediate-interests">
                 <% else %>
-                  <h3 class="well-segment-bar">Beginner</h3>
+                  <div class="beginner-interests">
                 <% end %>
                 
                 <% if not interest_group.empty? then %>
                   
                   <% interest_group.each do |interest| %>
-                    
-                    <h4><%= interest.topic.topic_name %></h4>
-                    <p><%= interest.interest_description %></p>
+                    <div class="interest">
+                      <div class="interest-bar">
+                        <h4><%= interest.topic.topic_name %></h4>
+                        <a class="btn-edit" href="#">
+                          <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                      <div class="interest-exp-level">
+                        <% if ind == 0 then %>
+                          expert
+                        <% elsif ind == 1 then %>
+                          intermediate
+                        <% else %>
+                          beginner
+                        <% end %>
+                      </div>
+                      <p class="interest-description"><%= interest.interest_description %></p>
+                    </div>
                   <% end %>
                   
                 <% end %>
+                  </div>
                 
               <% end %>
-            </div>
             
           </div>
           

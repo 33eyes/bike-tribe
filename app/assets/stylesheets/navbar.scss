@@ -1,7 +1,8 @@
+@import 'colors';
 
 // Navbar color
 .navbar-custom {
-  background-color: #004B25;
+  background-color: $dark-tone-1;
 }
 
 // Top padding needed to offset for fixed navbar
