@@ -17,9 +17,13 @@ $(document).ready(function() {
 		$("#"+menuid+" li").removeClass("selected-bkgd");
 		$(this).addClass("selected-bkgd");
 		
-		// Hide profile items that do not match the selected menu-item- class, and show those that do.
+		// Hide div profile items that do not match the selected menu-item- class, and show those divs that do.
 		$("."+menuid+"-items > div").addClass("hide-menu-item");
 		$("."+menuid+"-items > div.menu-item-"+menuitemclass).removeClass("hide-menu-item");
+
+		// Hide span profile items that do not match the selected menu-item- class, and show those spans that do.
+		$("."+menuid+"-items > span").addClass("hide-menu-item");
+		$("."+menuid+"-items > span.menu-item-"+menuitemclass).removeClass("hide-menu-item");
   });
 
 

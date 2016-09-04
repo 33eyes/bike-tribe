@@ -16,7 +16,20 @@ h2 {
 }
 
 
+
+
+/*** User Profile Styles ***/
+
+/* Profile edit button */
+.btn-edit-profile {
+  float: right;
+}
+
 /* General interest item box styles */
+.interests-container {
+  margin-bottom: 3em;
+}
+
 .interest {
   display: inline-block;
   vertical-align: top;
@@ -35,6 +48,7 @@ h2 {
     background-color: white;
     border-radius: 4px;
     padding: 4px;
+    max-width: 200px;
   }
   
   a {

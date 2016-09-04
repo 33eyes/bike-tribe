@@ -3,9 +3,6 @@
        <div class="col-md-2 col-md-offset-2">
         <div class="text-center">
           <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
-          <% if current_user.profile %>
-            <%= link_to "Edit", edit_user_profile_path(current_user), class: 'btn btn-green' %>
-          <% end %>
         </div>
         <div class="well well-menu-vert">
           <ul class="menu-vert" id="profile-menu">
@@ -17,8 +14,15 @@
       </div>
       <div class="col-md-4">
         <h1><strong><%= @user.profile.first_name %>
-        <%= @user.profile.last_name %></strong></h1>
-        
+        <%= @user.profile.last_name %>
+        <% if @user == current_user %>
+          <span class="profile-menu-items">
+            <span class="menu-item-profile">
+              <%= link_to "Edit", edit_user_profile_path(current_user), class: 'btn btn-green btn-edit-profile' %>
+            </span>
+          </span>
+        <% end %>
+        </strong></h1>
         <div class="profile-menu-items">
           
           <div class="menu-item-profile">
@@ -47,9 +51,11 @@
                     <div class="interest">
                       <div class="interest-bar">
                         <h4><%= interest.topic.topic_name %></h4>
+                        <% if @user == current_user %>
                         <a class="btn-edit" href="#">
                           <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
                         </a>
+                        <% end %>
                       </div>
                       <div class="interest-exp-level">
                         <% if ind == 0 then %>

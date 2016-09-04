@@ -1,9 +1,13 @@
-/* Color scheme variables */
+/*********** Color scheme variables ************/
 
-/* Overall color scheme */
+/**** Overall color scheme ****/
 $dark-tone-1: #004B25;
 
-/* User profiles */
-$expert-color: #9900cc;
-$intermediate-color: #2626f1;
-$beginner-color: #b3ffe8;
+
+
+/**** User profile ****/
+
+/* Interest items color-coding by experience level */
+$expert-color: #064a28;
+$intermediate-color: #039e46;
+$beginner-color: #05b18f;
