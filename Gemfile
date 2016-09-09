@@ -67,3 +67,6 @@ gem 'figaro'
 
 # Use Paperclip for image uploads
 gem 'paperclip'
+
+# Use BestInPlace for in-place form editing
+gem 'best_in_place'

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   end
   resources :topics
   
+  resources :interests
+  
   resources :contacts
   get '/about' => 'pages#about'
   root 'pages#home'

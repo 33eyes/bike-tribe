@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  respond_to :html, :json
   
   def index
     @users = User.all
@@ -16,4 +17,7 @@ class UsersController < ApplicationController
     @interests = @user.interests
     @interest_groups = Interest.group_interests(@interests)
   end
+  
+  
+  
 end

@@ -50,14 +50,19 @@
                   <% interest_group.each do |interest| %>
                     <div class="interest">
                       <div class="interest-bar">
-                        <h4><%= interest.topic.topic_name %></h4>
+                        <h4>
+                          <%= interest.topic.topic_name %>
+                        </h4>
                         <% if @user == current_user %>
-                        <a class="btn-edit" href="#">
+                        <span class="btn-edit toggle">
                           <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
-                        </a>
+                        </span>
+                        <span class="btn-save hide">
+                          <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                        </span>
                         <% end %>
                       </div>
-                      <div class="interest-exp-level">
+                      <div class="interest-exp-level toggle hide">
                         <% if ind == 0 then %>
                           expert
                         <% elsif ind == 1 then %>
@@ -66,8 +71,27 @@
                           beginner
                         <% end %>
                       </div>
-                      <% if not interest.interest_description.nil? then %>
-                      <p class="interest-description"><%= interest.interest_description %></p>
+                      <span class="btn-delete-container hide">
+                        <%= button_to interest_path(interest), method: :delete, data: {confirm: "Delete this interest?"}, class: 'btn-delete' do %>
+                          
+                        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                        <% end %>
+                        
+                      </span>
+                      <% if interest.interest_description.nil? || interest.interest_description.strip == "" then %>
+                        <div class="interest-description-empty hide">
+                      <% end %>
+                          <p class="interest-description toggle">
+                            <!-- <%= interest.interest_description %> -->
+                            <%= best_in_place interest, 
+                              :interest_description, 
+                              :as => :textarea,
+                              :html_attrs => { :style => 'width:235px; height:85px;' },
+                              :place_holder => 'Click here to add notes'
+                              %>
+                          </p>
+                      <% if interest.interest_description.nil? || interest.interest_description.strip == "" then %>
+                        </div>
                       <% end %>
                     </div>
                   <% end %>

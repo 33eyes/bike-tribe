@@ -1,5 +1,9 @@
 @import 'colors';
 
+.hide {
+  display: none;
+}
+
 /* Avatar styles */
 .user-show-avatar {
   height: 100px;
@@ -50,21 +54,47 @@ h2 {
     padding: 4px;
     max-width: 200px;
   }
+}
   
-  a {
-    display: none;
-    float: right;
-    padding: 0;
-    padding-left: 5px;
-    margin-top: 1px;
-    margin-bottom: 2px;
-    color: white;
-    font-size: 11px;
-  }
+span.btn-edit {
+  display: none;
+  float: right;
+  padding: 0;
+  padding-left: 5px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 11px;
+}
+
+span.btn-save {
+  float: right;
+  padding: 0;
+  padding-left: 5px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 11px;
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 1px;
+  margin-right: 1px;
+  width: 28px;
+}
+
+.btn-delete-container form.button_to {
+  display: inline;
+}
+
+.btn-delete {
+  @extend span.btn-save;
+  
+  text-align: center;
+  margin-top: 5px;
 }
 
 .interest-exp-level {
-  display: none;
+  display: inline-block;
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
@@ -89,6 +119,10 @@ h2 {
     background-color: $expert-color;
     border-color: $expert-color;
   }
+  
+  .btn-save, .btn-delete {
+    background-color: $expert-color;
+  }
 }
 
 
@@ -100,6 +134,10 @@ h2 {
     background-color: $intermediate-color;
     border-color: $intermediate-color;
   }
+  
+  .btn-save, .btn-delete {
+    background-color: $intermediate-color;
+  }
 }
 
 
@@ -110,5 +148,39 @@ h2 {
   .interest {
     background-color: $beginner-color;
     border-color: $beginner-color;
+  }
+  
+  .btn-save, .btn-delete {
+    background-color: $beginner-color;
+  }
+}
+
+
+
+/* Interest item box in editing mode styles */
+.interest {
+  .interest-bar h4.editing-mode {
+    width: 200px;
+    border-style: solid;
+    border-color: #31c772;
+  }
+  span.btn-edit.editing-mode {
+    
+  }
+  .interest-exp-level.editing-mode {
+    border-style: solid;
+    border-color: #31c772;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    padding: 4px;
+    width: 200px;
+  }
+  .interest-description.editing-mode {
+    display: block;
+    border-style: solid;
+    border-color: #31c772;
+    width: 250px;
+    height: 100px;
   }
 }
