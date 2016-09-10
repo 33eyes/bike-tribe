@@ -40,6 +40,9 @@ $(document).ready(function() {
     $(this).parents('.interest').find(".interest-description-empty").removeClass("hide");
     $(this).parents('.interest').find(".interest-description").addClass("editing-mode");
   
+    // Adjust cursor for editing
+    $(this).parents('.interest').removeClass("pointer");
+    
     // Show save and delete buttons 
     $(this).parents('.interest').find("span.btn-save").removeClass("hide");
     $(this).parents('.interest').find("span.btn-delete-container").removeClass("hide");
@@ -86,6 +89,10 @@ $(document).ready(function() {
       $(this).parents('.interest').removeClass("updated-intermediate");
       $(this).parents('.interest').addClass("updated-beginner");
     }
+  
+    // Adjust cursor after editing
+    $(this).parents('.interest').addClass("pointer");
+    
   
     // Hide save and delete buttons 
     $(this).parents('.interest').find("span.btn-delete-container").addClass("hide");

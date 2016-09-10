@@ -4,6 +4,11 @@
   display: none;
 }
 
+.pointer {
+  cursor:pointer;
+}
+
+
 /* Avatar styles */
 .user-show-avatar {
   height: 100px;
@@ -80,6 +85,8 @@ span.btn-save {
   padding: 1px;
   margin-right: 1px;
   width: 28px;
+  
+  cursor:pointer;
 }
 
 .btn-delete-container form.button_to {
@@ -189,6 +196,7 @@ span.btn-save {
     width: 200px;
     border-style: solid;
     border-color: #31c772;
+    cursor:pointer;
   }
   span.btn-edit.editing-mode {
     
@@ -201,6 +209,7 @@ span.btn-save {
     border-radius: 4px;
     padding: 4px;
     width: 200px;
+    cursor:pointer;
   }
   .interest-description.editing-mode {
     display: block;
@@ -208,5 +217,6 @@ span.btn-save {
     border-color: #31c772;
     width: 250px;
     height: 100px;
+    cursor:pointer;
   }
 }
