@@ -62,7 +62,8 @@
                         </span>
                         <% end %>
                       </div>
-                      <div class="interest-exp-level toggle hide">
+                      <div class="interest-exp-level toggle hide" id="interest-exp-level-<%=interest.id%>">
+                        <!--
                         <% if ind == 0 then %>
                           expert
                         <% elsif ind == 1 then %>
@@ -70,6 +71,14 @@
                         <% else %>
                           beginner
                         <% end %>
+                        -->
+                        <%= best_in_place interest, 
+                          :experience_level, 
+                          :as => :select, 
+                          :collection => [[1, 'beginner'], [2, 'intermediate'], [3, 'expert']],
+                          :html_attrs => { :style => 'color: green; width: 185px;' },
+                          :activator => '#interest-exp-level-' + interest.id.to_s 
+                        %>
                       </div>
                       <span class="btn-delete-container hide">
                         <%= button_to interest_path(interest), method: :delete, data: {confirm: "Delete this interest?"}, class: 'btn-delete' do %>
@@ -78,21 +87,18 @@
                         <% end %>
                         
                       </span>
-                      <% if interest.interest_description.nil? || interest.interest_description.strip == "" then %>
                         <div class="interest-description-empty hide">
-                      <% end %>
-                          <p class="interest-description toggle">
+                          <p class="interest-description toggle" id="interest-description-<%=interest.id%>">
                             <!-- <%= interest.interest_description %> -->
                             <%= best_in_place interest, 
                               :interest_description, 
                               :as => :textarea,
                               :html_attrs => { :style => 'width:235px; height:85px;' },
-                              :place_holder => 'Click here to add notes'
-                              %>
+                              :place_holder => 'Click here to add notes',
+                              :activator => '#interest-description-' + interest.id.to_s
+                            %>
                           </p>
-                      <% if interest.interest_description.nil? || interest.interest_description.strip == "" then %>
-                        </div>
-                      <% end %>
+                         </div>
                     </div>
                   <% end %>
                   

@@ -125,6 +125,14 @@ span.btn-save {
   }
 }
 
+.updated-expert {
+  background-color: $expert-color !important;
+  border-color: $expert-color !important;
+    
+  .btn-save, .btn-delete {
+    background-color: $expert-color !important;
+  }
+}
 
 /* Intermediate-level interest item box styles */
 .intermediate-interests {
@@ -140,6 +148,15 @@ span.btn-save {
   }
 }
 
+.updated-intermediate {
+  background-color: $intermediate-color !important;
+  border-color: $intermediate-color !important;
+    
+  .btn-save, .btn-delete {
+    background-color: $intermediate-color !important;
+  }
+}
+
 
 /* Beginner-level interest item box styles */
 .beginner-interests {
@@ -152,6 +169,15 @@ span.btn-save {
   
   .btn-save, .btn-delete {
     background-color: $beginner-color;
+  }
+}
+
+.updated-beginner {
+  background-color: $beginner-color !important;
+  border-color: $beginner-color !important;
+    
+  .btn-save, .btn-delete {
+    background-color: $beginner-color !important;
   }
 }
 

@@ -29,7 +29,7 @@ class InterestsController < ApplicationController
 
   private
     def interest_params
-      params.require(:interest).permit(:interest_description)
+      params.require(:interest).permit(:interest_description, :experience_level)
     end
     #def only_current_user
     #  @user = User.find( params[:user_id] )
