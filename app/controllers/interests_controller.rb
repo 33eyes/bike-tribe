@@ -4,6 +4,11 @@ class InterestsController < ApplicationController
   def show 
     @interest = Interest.find(params[:id])
   end
+  
+  def new
+    # Form where a user can add a new interest.
+    @interest = Interest.new
+  end
  
   def update
     @interest = Interest.find(params[:id])
