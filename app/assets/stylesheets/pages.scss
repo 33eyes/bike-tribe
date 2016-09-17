@@ -10,6 +10,7 @@
 body {
     background-image: url("bitSpokes_brand_colors_bkgd_2.png"); 
     background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 .hero {
@@ -44,4 +45,24 @@ body {
   border-width: 2px;
   margin-top: 40px;
   box-shadow: 1px 1px 10px #278069;
+}
+
+#footer {
+  margin-top: 100px;
+  
+  #footer-links {
+    display: inline;
+    
+    ul {
+      list-style: none;
+      
+      li {
+        display: inline;
+      }
+    }
+  }
+  
+  #footer-copyright {
+    display: inline;
+  }
 }
