@@ -26,8 +26,7 @@
       </button>
       
       <%= link_to root_path, class: 'navbar-brand' do %>
-        <i class="fa fa-cogs fa-1x"></i>
-        bitSpokes
+        <%= image_tag("bitSpokes_name_w_logo_small_1.png") %>
       <% end %>
     </div>
 
@@ -36,9 +35,9 @@
       
       <div class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-green navbar-btn' %>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-green navbar-btn' %>
         <% else %>
-          <%= link_to "Log In", new_user_session_path, class: 'btn btn-green navbar-btn', method: :get %>
+          <%= link_to "Sign in", new_user_session_path, class: 'btn navbar-btn', method: :get %>
         <% end %>
       </div>
       
@@ -48,8 +47,10 @@
           <li><%= link_to "Community", users_path %></li>
           <li><%= link_to "My Account", edit_user_registration_path %></li>
         <% end %>
+        <!--
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact Us", new_contact_path %></li>
+        -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -1,7 +1,10 @@
 
-<div class="jumbotron text-center">
-    <h1>bitSpokes</h1>
-    <h3>Bike in the cloud.</h3>
+<div class="hero text-center">
+  <%= image_tag("bitSpokes_logo_white_big.png") %>
+  <h2>Bike in the cloud</h2>
+  <h3>Team up. Share <div class="share-text-box">bikes</div>.</h3>
+  
+  <%= link_to "Sign up for free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-lg signup-button' %>
 </div>
 
 <div class="row">
@@ -25,14 +28,10 @@
       </div>
     </div>
   <% else %>
-    <div class="col-md-6">
-      <div class="well">
-        <h2 class="text-center">Basic Membership</h2>
-        <h4>Sign up for free and get basic access to the community.</h4>
-        <br/>
-        <%= link_to "Sign up for Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
-      </div>
-    </div>
+    
+      
+    
+    <!--
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Premium Membership</h2>
@@ -40,5 +39,8 @@
         <%= link_to "Sign up for Premium", new_user_registration_path(plan: @premium_plan.id), class: 'btn btn-success btn-lg btn-block' %>
       </div>
     </div>
+    -->
+    
+    
   <% end %>
 </div>
