@@ -49,20 +49,30 @@ body {
 
 #footer {
   margin-top: 100px;
+  padding-top: 10px;
+  background-color: #278069;
+  height: 100px;
   
   #footer-links {
     display: inline;
+    float: left;
+    margin-left: 40px;
     
-    ul {
-      list-style: none;
-      
-      li {
-        display: inline;
-      }
+    a, a:focus, a:hover {
+      padding: 0 3px;
+      color: white;
+      text-decoration: none;
     }
   }
   
   #footer-copyright {
     display: inline;
+    color: #2cdba8;
+    float: right;
+  }
+  
+  i.fa.fa-circle.footer-delimiter {
+    color: #5efbd2;
+    margin: 0 4px;
   }
 }
