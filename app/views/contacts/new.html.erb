@@ -1,28 +1,28 @@
 <div class="row">
-  <div class="col-md-2" id="about-title-section">
-    <div id="about-title" class="vertical">
+  <div class="col-md-2" id="contact-title-section">
+    <div id="contact-title" class="vertical">
       <h2>Contact us</h2>
     </div>
   </div>
-    <div class="col-md-4">
-        <div class="well">
-            <%= form_for @contact do |f| %>
-                <div class="form-group">
-                    <%= f.label :name %>
-                    <%= f.text_field :name, class: 'form-control' %>
-                </div>
-                    
-                <div class="form-group">
-                    <%= f.label :email %>
-                    <%= f.email_field :email, class: 'form-control' %>
-                </div>
-                    
-                <div class="form-group">
-                    <%= f.label :comments %>
-                    <%= f.text_area :comments, class: 'form-control' %>
-                </div>
-                <%= f.submit "Submit", class: 'btn btn-default' %>
-            <% end %>
+  <div class="col-md-4" id="contact-form-section">
+    <div class="well" id="contact-form">
+      <%= form_for @contact do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
         </div>
+            
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+            
+        <div class="form-group">
+          <%= f.label :comments %>
+          <%= f.text_area :comments, class: 'form-control' %>
+        </div>
+        <%= f.submit "Send", class: 'btn btn-green' %>
+      <% end %>
     </div>
+  </div>
 </div>

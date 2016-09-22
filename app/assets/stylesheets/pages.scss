@@ -152,3 +152,37 @@ body {
 #about-blurb-parag {
     font-size: 16px;
 }
+
+
+
+/**** 'Contact us' page styles ****/
+#contact-title-section {
+  padding: 0;
+}
+
+#contact-title {
+  float: right;
+  margin-top: 100px;
+  margin-right: -40px;
+  
+  h2 {
+    font-size: 36px;
+    color: #278069;
+    margin-bottom: 0;
+  }
+}
+
+#contact-form-section {
+  padding: 0;
+}
+
+#contact-form {
+  margin-top: 36px;
+  font-size: 18px;
+  margin-bottom: -30px;
+  background-color: white;
+  border: 2px solid #2cdba8;
+  box-shadow: 1px 1px 10px #278069;
+  border-radius: 8px;
+  min-height: 200px;
+}
