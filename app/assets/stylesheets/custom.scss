@@ -8,15 +8,60 @@
 
 
 
-body {
-    //    background-color: blue;
-    background-image: asset-data-url("20160623_130730_crop1_lightBlue_blur3.jpg");
-//    background-image: asset-data-url("20160623_130730_crop1_purple_blur1.jpg");
-    background-size: cover;
+// Bootstrap overrides
+
+// Override default button on-hover font color
+.btn:hover, .btn:focus, .btn.focus {
+  color: #fff;
 }
 
+// Navbar links list text color
+.navbar-inverse .navbar-nav > li > a {
+  color: #8AD4BE;
+}
+
+// Navbar brand text color
+.navbar-inverse .navbar-brand {
+  color: #8AD4BE;
+}
+
+// Well colors
+.well {
+  background-color: #daf1ea;
+  border: 1px solid #b5e3d5;
+}
+.well.well-inverse {
+  background-color: #fff;
+  border: 1px solid #b5e3d5;
+  box-shadow: 1px 1px 3px #daf1ea;
+}
+
+// Timestamp styles
+.timestamp {
+  margin: 0;
+  color: #777;
+}
+
+
+/*
+// OLD 
 .alert-notice {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
+
+
+.user-page-header {
+  background-color: #dcccff;
+  
+  padding-bottom: 1.5em;
+}
+
+.social-media-group {
+    margin-top: 1em;
+    margin-left: 0.5em;
+    font-size: 1.5em;
+}
+
+*/

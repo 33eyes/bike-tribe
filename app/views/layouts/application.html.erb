@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BikeTribe</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bitSpokes</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
   <%= javascript_include_tag 'application' %>
@@ -9,90 +12,80 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<!-- Bootstrap navbar -->
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <%= link_to root_path, class: 'navbar-brand' do %>
-        <i class="fa fa-cogs fa-1x" style="color:white;"></i>
-        BikeTribe
-      <% end %>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="main-nav-collapse">
-      <div class="nav navbar-nav navbar-right">
+  
+<div id="bkgd-container">
+  <!-- Bootstrap navbar -->
+  <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
         <% if user_signed_in? %>
-          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary navbar-btn' %>
-        <% else %>
-          <%= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <% end %>
+        
+        <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= image_tag("bitSpokes_name_w_logo_small_1.png") %>
         <% end %>
       </div>
-      
-      <!--
-      <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+  
+      <% if user_signed_in? %>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <div class="nav navbar-nav navbar-right">
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-green navbar-btn' %>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Community", users_path %></li>
+            <li><%= link_to "My Account", edit_user_registration_path %></li>
           </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        </div><!-- /.navbar-collapse -->  
+          
+      <% else %>
+        <div class="nav navbar-nav navbar-right">
+          <%= link_to "Sign in", new_user_session_path, class: 'btn navbar-btn', method: :get %>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      -->
-      
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to "Community", users_path %></li>
-          <li><%= link_to "My Account", edit_user_registration_path %></li>
-        <% end %>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Contact Us", new_contact_path %></li>
+      <% end %>
         
-        <!--
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-        -->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="container">
-  <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "alert alert-#{key}" %>
-  <% end %>
-  <%= yield %>
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  <div class="container-fluid padded-wrapper">
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+  
+  
+  
+    
+  <!--FOOTER SECTION -->
+  <footer class="footer" id="footer"> 
+    <div class="container">
+  	  <div id="footer-links">
+  	    <%= link_to "About", about_path %>
+        <i class="fa fa-circle footer-delimiter" aria-hidden="true"></i>
+        <%= link_to "Contact us", new_contact_path %>
+  	  </div>
+  		<p id="footer-copyright">
+  			Copyright 
+  			<i class="fa fa-copyright" aria-hidden="true"></i> 
+  			2016
+  			<script>
+  				new Date().getFullYear()>2016&&document.write("- "+new Date().getFullYear());
+  			</script> 
+  			bitSpokes.com <i class="fa fa-circle footer-delimiter" aria-hidden="true"></i> All Rights Reserved
+  		</p>
+    </div>
+  </footer>
+  <!--END FOOTER SECTION --> 
 </div>
+
 
 </body>
 </html>

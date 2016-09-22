@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
   has_one :profile
   attr_accessor :stripe_card_token
   
+  has_many :interests
+  has_many :topics, through: :interests
+  
+  
   def save_with_payment
     if valid?
       customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)

@@ -1,12 +1,222 @@
+@import 'colors';
+
+.hide {
+  display: none;
+}
+
+.pointer {
+  cursor:pointer;
+}
+
+
+/* Avatar styles */
 .user-show-avatar {
-  height: 128px;
-  width: 128px;
-}
-
-.user-index-avatar {
+  height: 100px;
+  width: 100px;
+  border: solid white 0.3em;
   border-radius: 50%;
+  margin-top: 1em;
 }
 
-.well.grey-bg {
-  background-color: lightgrey;
+
+/* Section titles styles */
+h2 {
+  color: $dark-tone-1;
+}
+
+
+
+
+/*** User Profile Styles ***/
+
+/* Profile edit button */
+.btn-edit-profile {
+  float: right;
+}
+
+/* General interest item box styles */
+.interests-container {
+  margin-bottom: 3em;
+}
+
+.interest {
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px;
+  border: 3px solid grey;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.interest-bar {
+  margin: 0;
+  
+  h4 {
+    display: inline-flex;
+    margin: 0;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
+    max-width: 200px;
+  }
+}
+  
+span.btn-edit {
+  display: none;
+  float: right;
+  padding: 0;
+  padding-left: 5px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 11px;
+}
+
+span.btn-save {
+  float: right;
+  padding: 0;
+  padding-left: 5px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 11px;
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 1px;
+  margin-right: 1px;
+  width: 28px;
+  
+  cursor:pointer;
+}
+
+.btn-delete-container form.button_to {
+  display: inline;
+}
+
+.btn-delete {
+  @extend span.btn-save;
+  
+  text-align: center;
+  margin-top: 5px;
+}
+
+.interest-exp-level {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 2px;
+}
+
+.interest-description {
+  display: none;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0;
+  max-width: 250px;
+}
+
+
+/* Expert-level interest item box styles */
+.expert-interests {
+  display: inline-block;
+  
+  .interest {
+    background-color: $expert-color;
+    border-color: $expert-color;
+  }
+  
+  .btn-save, .btn-delete {
+    background-color: $expert-color;
+  }
+}
+
+.updated-expert {
+  background-color: $expert-color !important;
+  border-color: $expert-color !important;
+    
+  .btn-save, .btn-delete {
+    background-color: $expert-color !important;
+  }
+}
+
+/* Intermediate-level interest item box styles */
+.intermediate-interests {
+  display: inline-block;
+  
+  .interest {
+    background-color: $intermediate-color;
+    border-color: $intermediate-color;
+  }
+  
+  .btn-save, .btn-delete {
+    background-color: $intermediate-color;
+  }
+}
+
+.updated-intermediate {
+  background-color: $intermediate-color !important;
+  border-color: $intermediate-color !important;
+    
+  .btn-save, .btn-delete {
+    background-color: $intermediate-color !important;
+  }
+}
+
+
+/* Beginner-level interest item box styles */
+.beginner-interests {
+  display: inline-block;
+  
+  .interest {
+    background-color: $beginner-color;
+    border-color: $beginner-color;
+  }
+  
+  .btn-save, .btn-delete {
+    background-color: $beginner-color;
+  }
+}
+
+.updated-beginner {
+  background-color: $beginner-color !important;
+  border-color: $beginner-color !important;
+    
+  .btn-save, .btn-delete {
+    background-color: $beginner-color !important;
+  }
+}
+
+
+
+/* Interest item box in editing mode styles */
+.interest {
+  .interest-bar h4.editing-mode {
+    width: 200px;
+    border-style: solid;
+    border-color: #31c772;
+    cursor:pointer;
+  }
+  span.btn-edit.editing-mode {
+    
+  }
+  .interest-exp-level.editing-mode {
+    border-style: solid;
+    border-color: #31c772;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    padding: 4px;
+    width: 200px;
+    cursor:pointer;
+  }
+  .interest-description.editing-mode {
+    display: block;
+    border-style: solid;
+    border-color: #31c772;
+    width: 250px;
+    height: 100px;
+    cursor:pointer;
+  }
 }

@@ -1,3 +1,154 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/**** Homepage styles ****/
+
+// Backgrounds
+body {
+  background-color: #278069;
+}
+#bkgd-container {
+    background-image: image-url("bitSpokes_brand_colors_bkgd_2.png"); 
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width:100%;
+}
+
+.hero {
+  img {
+    margin-top: 40px;
+  }
+  
+  h2 {
+    color: white;
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+  }
+  
+  h3 {
+    color: white;
+    margin-top: 30px;
+  }
+  
+  .share-text-box {
+    display: inline;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 2px solid #5efbd2;
+    box-shadow: 1px 1px 5px #278069;
+    width: 500px;
+  }
+}
+
+.tagline-left {
+  padding: 0 3px;
+  
+  h3 {
+    float: right;
+  }
+}
+.tagline-right {
+  padding: 0 3px;
+  
+  h3 {
+    float: left;
+  }
+}
+
+
+.signup-button {
+  color: #fff;
+  background-color: #184e40;
+  border-color: #5efbd2;
+  border-width: 2px;
+  margin-top: 40px;
+  box-shadow: 1px 1px 10px #278069;
+}
+
+#footer {
+  margin-top: 100px;
+  padding-top: 10px;
+  background-color: #278069;
+  height: 100px;
+  
+  #footer-links {
+    display: inline;
+    float: left;
+    margin-bottom: 10px;
+    
+    a, a:focus, a:hover {
+      padding: 0 3px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  #footer-copyright {
+    display: inline;
+    color: #2cdba8;
+    float: right;
+  }
+  
+  i.fa.fa-circle.footer-delimiter {
+    color: #5efbd2;
+    margin: 0 4px;
+  }
+}
+
+
+
+
+/**** 'About' page styles ****/
+#about-title-section {
+  padding: 0;
+}
+
+.vertical{
+    -webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform:rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#about-title {
+  float: right;
+  margin-top: 70px;
+  
+  h2 {
+    font-size: 36px;
+    color: #278069;
+    margin-bottom: 0;
+  }
+}
+
+#about-blurb-section {
+  padding: 0;
+}
+
+#about-blurb {
+  margin-top: 36px;
+  font-size: 18px;
+  margin-bottom: 250px;
+  background-color: white;
+  border: 2px solid #2cdba8;
+  box-shadow: 1px 1px 10px #278069;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+.bit-word {
+  color: #41bd9d;
+}
+
+#about-blurb-summary {
+  font-size: 24px;
+}
+
+#about-blurb-parag {
+    font-size: 16px;
+}
