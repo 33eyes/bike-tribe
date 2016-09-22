@@ -12,67 +12,66 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<!-- Bootstrap navbar -->
-<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
-  <div class="container-fluid container-fluid-custom">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <%= link_to root_path, class: 'navbar-brand' do %>
-        <%= image_tag("bitSpokes_name_w_logo_small_1.png") %>
-      <% end %>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="main-nav-collapse">
-      
-      <div class="nav navbar-nav navbar-right">
+  
+<div id="bkgd-container">
+  <!-- Bootstrap navbar -->
+  <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
         <% if user_signed_in? %>
-          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-green navbar-btn' %>
-        <% else %>
-          <%= link_to "Sign in", new_user_session_path, class: 'btn navbar-btn', method: :get %>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <% end %>
+        
+        <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= image_tag("bitSpokes_name_w_logo_small_1.png") %>
         <% end %>
       </div>
-      
-      
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to "Community", users_path %></li>
-          <li><%= link_to "My Account", edit_user_registration_path %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="container-fluid padded-wrapper">
-  <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "alert alert-#{key}" %>
-  <% end %>
-  <%= yield %>
-</div>
-
-
-
   
-<!--FOOTER SECTION -->
-<div class="container-fluid text-center" id="footer"> 
-  <div class="row">
-    <div class="col-md-4 col-md-offset-2">
+      <% if user_signed_in? %>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <div class="nav navbar-nav navbar-right">
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-green navbar-btn' %>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Community", users_path %></li>
+            <li><%= link_to "My Account", edit_user_registration_path %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->  
+          
+      <% else %>
+        <div class="nav navbar-nav navbar-right">
+          <%= link_to "Sign in", new_user_session_path, class: 'btn navbar-btn', method: :get %>
+        </div>
+      <% end %>
+        
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  <div class="container-fluid padded-wrapper">
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+  
+  
+  
+    
+  <!--FOOTER SECTION -->
+  <footer class="footer" id="footer"> 
+    <div class="container">
   	  <div id="footer-links">
   	    <%= link_to "About", about_path %>
         <i class="fa fa-circle footer-delimiter" aria-hidden="true"></i>
         <%= link_to "Contact us", new_contact_path %>
   	  </div>
-    </div>
-    <div class="col-md-4">
   		<p id="footer-copyright">
   			Copyright 
   			<i class="fa fa-copyright" aria-hidden="true"></i> 
@@ -82,11 +81,10 @@
   			</script> 
   			bitSpokes.com <i class="fa fa-circle footer-delimiter" aria-hidden="true"></i> All Rights Reserved
   		</p>
-	  </div>
-	</div>
+    </div>
+  </footer>
+  <!--END FOOTER SECTION --> 
 </div>
-<!--END FOOTER SECTION --> 
-
 
 
 </body>

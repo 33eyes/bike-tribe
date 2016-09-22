@@ -2,8 +2,14 @@
 <div class="hero text-center">
   <%= image_tag("bitSpokes_logo_white_big.png") %>
   <h2>Bike in the cloud</h2>
-  <h3>Team up. Share <div class="share-text-box">bikes</div>.</h3>
-  
+  <div class="row">
+    <div class="col-md-6 tagline-left">
+      <h3>Team up.</h3>
+    </div>
+    <div class="col-md-6 tagline-right">
+      <h3>Share <div class="share-text-box" id="share-things"></div></h3>
+    </div>
+  </div>
   <%= link_to "Sign up for free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-lg signup-button' %>
 </div>
 
