@@ -1,17 +1,16 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3 text-center"> 
-    <% if params[:plan] == '2' %>
-      <h1>Premium Account</h1>
-      <p>Sign up for the premium account for $1/month and get access to the community and extra features!</p>
-    <% else %>
-      <h1>Basic Account</h1>
-      <p>Sign up for free and get basic access to the community.</p>
-    <% end %>
+  <div class="col-md-2" id="signup-title-section">
+    <div id="signup-title" class="vertical">
+      <% if params[:plan] == '2' %>
+        <h2>Sign up for premium</h2>
+      <% else %>
+        <h2>Sign up for free</h2>
+      <% end %>
+    </div>
   </div>
   
-  <div class="col-md-6 col-md-offset-3">
-    <div class="well">
-      <h2>Sign up</h2>
+  <div class="col-md-4" id="signup-form-section">
+    <div class="well" id="signup-form">
       <% if params[:plan] == '2' %>
         <%= render "premium_form" %>
       <% else %>
@@ -22,3 +21,4 @@
     </div>
   </div>
 </div>
+
