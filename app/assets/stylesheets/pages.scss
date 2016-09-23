@@ -223,4 +223,37 @@ body {
 
 
 
+/**** Account login page styles ****/
+#login-title-section {
+  padding: 0;
+}
+
+#login-title {
+  float: right;
+  margin-top: 70px;
+  margin-right: 0px;
+  
+  h2 {
+    font-size: 36px;
+    color: #278069;
+    margin-bottom: 0;
+  }
+}
+
+#login-form-section {
+  padding: 0;
+}
+
+#login-form {
+  margin-top: 36px;
+  font-size: 18px;
+  margin-bottom: 100px;
+  background-color: white;
+  border: 2px solid #2cdba8;
+  box-shadow: 1px 1px 10px #278069;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+
 
