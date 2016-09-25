@@ -16,7 +16,7 @@ var items = [
     "interests",
     "bikes",
     "trails",
-    "tools",
+    "gear",
     "advice"
 ];
 
