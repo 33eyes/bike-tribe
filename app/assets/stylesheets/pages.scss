@@ -257,3 +257,40 @@ body {
 
 
 
+
+/**** User page styles ****/
+#user-title-section {
+  padding: 0;
+}
+
+#user-title {
+  float: right;
+  margin-top: 50px;
+  margin-right: 20px;
+  
+  h2 {
+    font-size: 36px;
+    color: #278069;
+    margin-bottom: 0;
+  }
+}
+
+#user-content-section {
+  padding: 0;
+}
+
+#user-content {
+  margin-top: 36px;
+  font-size: 18px;
+  margin-bottom: 100px;
+  background-color: white;
+  border: 2px solid #2cdba8;
+  box-shadow: 1px 1px 10px #278069;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+#profile-about-section {
+//  width: 400px;
+//  display: inline-block;
+}
