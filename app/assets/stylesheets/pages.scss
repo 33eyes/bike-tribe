@@ -281,7 +281,7 @@ body {
 
 #user-content {
   margin-top: 36px;
-  font-size: 18px;
+//  font-size: 18px;
   margin-bottom: 100px;
   background-color: white;
   border: 2px solid #2cdba8;
@@ -290,7 +290,25 @@ body {
   min-height: 200px;
 }
 
-#profile-about-section {
-//  width: 400px;
-//  display: inline-block;
+#name-header {
+  h1 {
+    font-size: 28px;
+    margin: 0;
+  }  
+  
+  h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+
+/**** User dashboard styles ****/
+.menu-item-dashboard {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }
