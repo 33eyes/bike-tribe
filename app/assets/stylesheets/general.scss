@@ -6,6 +6,8 @@ Description: General styles
 @import 'colors';
 
 
+/**** Utility styles ****/
+
 // Class for hiding stuff
 .hide {
   display: none;
@@ -15,6 +17,26 @@ Description: General styles
 .pointer {
   cursor:pointer;
 }
+
+
+/**** Background styles ****/
+
+// Body background shows up in footer
+body {
+  background-color: $logo-tone-dark;
+}
+
+// Main background
+#bkgd-container {
+  background: $logo-tone-medium image-url("bitSpokes_brand_colors_bkgd_2.png") repeat fixed; 
+  width:100%;
+}
+
+
+
+
+
+/**** Text styles ****/
 
 // Timestamp styles
 .timestamp {
