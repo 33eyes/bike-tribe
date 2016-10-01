@@ -1,5 +1,16 @@
+/*************************************
+Description: Oooh, button styles
+**************************************/
 
-// Custom Bootstrap buttons
+/*** Bootstrap overrides ***/
+
+// Override default button on-hover font color
+.btn:hover, .btn:focus, .btn.focus {
+  color: #fff;
+}
+
+
+/*** Custom Bootstrap buttons ***/
 
 // Green button
 .btn-green {

@@ -1,6 +1,12 @@
+/*************************************
+Description: Menus styles
+**************************************/
+
+@import 'colors';
 
 
-// Vertical menu
+/*** Vertical menu ***/
+
 div.well.well-menu-vert {
   padding: 7px;
   margin-top: 1em;
@@ -16,19 +22,19 @@ ul.menu-vert > li {
   padding: 5px;
   margin-right: -8px;
   border-radius: 4px 0 0 4px;
-  color: #00331a;
+  color: $dark-tone-1;
   cursor:pointer;
 }
 ul.menu-vert > li:hover {
-  background-color: #8AD4BE;
+  background-color: $medium-tone-1;
 }
 
 // Selected menu item styles
 .selected-bkgd {
-  background-color: #fff;
+  background-color: white;
 }
 ul.menu-vert > li.selected-bkgd:hover {
-  background-color: #fff;
+  background-color: white;
 }
 
 // Hide class for menu item sections

@@ -1,27 +1,49 @@
+/*************************************
+Description: Navbar styles
+**************************************/
+
 @import 'colors';
 
-// Navbar color
-.navbar-custom {
-  background-color: $dark-tone-1;
-  height: 80px;
+
+/*** Bootstrap overrides ***/
+
+// Navbar links list text color
+.navbar-inverse .navbar-nav > li > a {
+  color: $logo-tone-medium;
 }
+
+// Navbar brand text color -- for alt text of brand text logo
+.navbar-inverse .navbar-brand {
+  color: $logo-tone-medium;
+}
+
 .navbar-brand {
   padding: 0;
 }
 .navbar-brand > img {
   padding: 10px;
 }
+
+
+/*** Custom navbar styles ***/
+
+.navbar-custom {
+  background-color: $dark-tone-1;
+  height: 80px;
+}
 .navbar-btn {
     margin: 22px;
     color: white;
     background-color: inherit;
     border: 2px solid;
-    border-color: #5efbd2;
+    border-color: $logo-tone-light;
 }
+
+
+/*** Navbar offsets ***/
 
 // Top padding needed to offset for fixed navbar
 .padded-wrapper {
-  //padding-top: 3.5em;
   padding-top: 80px;
 }
 

@@ -1,0 +1,23 @@
+/*************************************
+Description: General styles 
+ - used throughout the app
+**************************************/
+
+@import 'colors';
+
+
+// Class for hiding stuff
+.hide {
+  display: none;
+}
+
+// Class for pointing at stuff
+.pointer {
+  cursor:pointer;
+}
+
+// Timestamp styles
+.timestamp {
+  margin: 0;
+  color: $de-emphasized-text;
+}

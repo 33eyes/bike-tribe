@@ -1,13 +1,25 @@
-/*********** Color scheme variables ************/
+/*************************************
+Description: Sassy color variables
+**************************************/
 
-/**** Overall color scheme ****/
-//$dark-tone-1: #004B25;
-$dark-tone-1: #184e40;
-
-
+/**** Main brand colors ****/
 $logo-tone-dark: #278068;
 $logo-tone-medium: #2cdba8;
 $logo-tone-light: #5efbd2;
+
+
+/**** Overall color theme ****/
+
+// Greens
+$dark-tone-1: #184e40; // Used in navbar bkgd and some text colors
+
+$medium-tone-1: #8AD4BE; // Used in vertical menu hover
+
+
+// Grays
+$de-emphasized-text: #777; // Used for timestamps, etc.
+
+
 
 
 /**** User profile ****/

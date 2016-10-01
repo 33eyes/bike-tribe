@@ -1,0 +1,19 @@
+/*************************************
+Description: Wells styles
+**************************************/
+
+@import 'colors';
+
+
+/*** Bootstrap overrides ***/
+
+// Well colors
+.well {
+  background-color: #daf1ea;
+  border: 1px solid #b5e3d5;
+}
+.well.well-inverse {
+  background-color: #fff;
+  border: 1px solid #b5e3d5;
+  box-shadow: 1px 1px 3px #daf1ea;
+}
