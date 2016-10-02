@@ -18,6 +18,15 @@ Description: General styles
   cursor:pointer;
 }
 
+// Class for vertical text
+.vertical{
+    -webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform:rotate(270deg);
+    transform: rotate(270deg);
+}
+
 
 /**** Background styles ****/
 
@@ -33,10 +42,39 @@ body {
 }
 
 
+/**** App content alignment styles ****/
+
+// Vertical title styles
+.vertical-title-section {
+  padding: 0;
+}
+.vertical-title {
+  float: right;
+}
+
+.content-section {
+  padding: 0;
+}
+
 
 
 
 /**** Text styles ****/
+h1 {
+  font-size: 36px;
+  color: $logo-tone-dark;
+  margin-bottom: 0;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+// Brand-color-hued text color
+.bit-word {
+  color: $bit-word-color;
+}
+
 
 // Timestamp styles
 .timestamp {

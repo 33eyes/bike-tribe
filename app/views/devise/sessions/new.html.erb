@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-md-2" id="login-title-section">
-    <div id="login-title" class="vertical">
-      <h2>Log in</h2>
+  <div class="col-md-2 vertical-title-section">
+    <div id="login-title" class="vertical vertical-title">
+      <h1>Log in</h1>
     </div>
   </div>
   
-  <div class="col-md-4" id="login-form-section">
-    <div class="well" id="login-form">
+  <div class="col-md-4 content-section">
+    <div class="well content-well" id="login-form">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field form-group">
           <%= f.label :email %><br />

@@ -1,9 +1,13 @@
 <div class="row">
-  <div class="col-md-4 col-md-offset-2" id="signup-form-section">
-    <div class="well" id="signup-form">
-      
+  <div class="col-md-2 vertical-title-section">
+    <div id="forgot-password-title" class="vertical vertical-title">
+      <h1>Uh oh..</h1>
+    </div>
+  </div>
+  
+  <div class="col-md-4 content-section">
+    <div class="well content-well" id="forgot-password-form">
       <h2>Forgot your password?</h2>
-
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= devise_error_messages! %>
       

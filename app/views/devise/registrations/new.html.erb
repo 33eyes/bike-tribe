@@ -1,16 +1,16 @@
 <div class="row">
-  <div class="col-md-2" id="signup-title-section">
-    <div id="signup-title" class="vertical">
+  <div class="col-md-2 vertical-title-section">
+    <div id="signup-title" class="vertical vertical-title">
       <% if params[:plan] == '2' %>
-        <h2>Sign up for premium</h2>
+        <h1>Sign up for premium</h1>
       <% else %>
-        <h2>Sign up for free</h2>
+        <h1>Sign up for free</h1>
       <% end %>
     </div>
   </div>
   
-  <div class="col-md-4" id="signup-form-section">
-    <div class="well" id="signup-form">
+  <div class="col-md-4 content-section">
+    <div class="well content-well" id="signup-form">
       <% if params[:plan] == '2' %>
         <%= render "premium_form" %>
       <% else %>

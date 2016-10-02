@@ -5,14 +5,15 @@
 
 
 /*************************************
-Description: Static pages styles
+Description: Main pages styles
 **************************************/
 
+@import 'colors';
 
 
-/**** Homepage styles ****/
+/**** Landing homepage styles ****/
 
-
+// Big logo with taglines
 .hero {
   img {
     margin-top: 40px;
@@ -34,12 +35,13 @@ Description: Static pages styles
     display: inline;
     padding: 0 5px;
     border-radius: 2px;
-    border: 2px solid #5efbd2;
-    box-shadow: 1px 1px 5px #278069;
+    border: 2px solid $logo-tone-light;
+    box-shadow: 1px 1px 5px $logo-tone-dark;
     width: 500px;
   }
 }
 
+// Secondary tagline alignment
 .tagline-left {
   padding: 0 3px;
   
@@ -55,248 +57,84 @@ Description: Static pages styles
   }
 }
 
-
+// Sign-up button
 .signup-button {
-  color: #fff;
-  background-color: #184e40;
-  border-color: #5efbd2;
+  color: white;
+  background-color: $dark-tone-1;
+  border-color: $logo-tone-light;
   border-width: 2px;
   margin-top: 40px;
-  box-shadow: 1px 1px 10px #278069;
+  box-shadow: 1px 1px 10px $logo-tone-dark;
 }
-
-#footer {
-  margin-top: 100px;
-  padding-top: 10px;
-  background-color: #278069;
-  height: 100px;
-  
-  #footer-links {
-    display: inline;
-    float: left;
-    margin-bottom: 10px;
-    
-    a, a:focus, a:hover {
-      padding: 0 3px;
-      color: white;
-      text-decoration: none;
-    }
-  }
-  
-  #footer-copyright {
-    display: inline;
-    color: #2cdba8;
-    float: right;
-  }
-  
-  i.fa.fa-circle.footer-delimiter {
-    color: #5efbd2;
-    margin: 0 4px;
-  }
-}
-
-
 
 
 /**** 'About' page styles ****/
-#about-title-section {
-  padding: 0;
-}
-
-.vertical{
-    -webkit-transform:rotate(270deg);
-    -moz-transform:rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform:rotate(270deg);
-    transform: rotate(270deg);
-}
 
 #about-title {
-  float: right;
   margin-top: 70px;
-  
-  h2 {
-    font-size: 36px;
-    color: #278069;
-    margin-bottom: 0;
-  }
-}
-
-#about-blurb-section {
-  padding: 0;
 }
 
 #about-blurb {
-  margin-top: 36px;
-  font-size: 18px;
   margin-bottom: 250px;
-  background-color: white;
-  border: 2px solid #2cdba8;
-  box-shadow: 1px 1px 10px #278069;
-  border-radius: 8px;
-  min-height: 200px;
 }
-
-.bit-word {
-  color: #41bd9d;
-}
-
-#about-blurb-summary {
-  font-size: 24px;
-}
-
-#about-blurb-parag {
-    font-size: 16px;
-}
-
 
 
 /**** 'Contact us' page styles ****/
-#contact-title-section {
-  padding: 0;
-}
 
 #contact-title {
-  float: right;
   margin-top: 100px;
   margin-right: -40px;
-  
-  h2 {
-    font-size: 36px;
-    color: #278069;
-    margin-bottom: 0;
-  }
-}
-
-#contact-form-section {
-  padding: 0;
 }
 
 #contact-form {
-  margin-top: 36px;
-  font-size: 18px;
   margin-bottom: -30px;
-  background-color: white;
-  border: 2px solid #2cdba8;
-  box-shadow: 1px 1px 10px #278069;
-  border-radius: 8px;
-  min-height: 200px;
 }
-
 
 
 /**** Account sign-up page styles ****/
-#signup-title-section {
-  padding: 0;
-}
 
 #signup-title {
-  float: right;
   margin-top: 140px;
   margin-right: -75px;
-  
-  h2 {
-    font-size: 36px;
-    color: #278069;
-    margin-bottom: 0;
-  }
-}
-
-#signup-form-section {
-  padding: 0;
 }
 
 #signup-form {
-  margin-top: 36px;
-  font-size: 18px;
   margin-bottom: 100px;
-  background-color: white;
-  border: 2px solid #2cdba8;
-  box-shadow: 1px 1px 10px #278069;
-  border-radius: 8px;
-  min-height: 200px;
 }
-
 
 
 /**** Account login page styles ****/
-#login-title-section {
-  padding: 0;
-}
 
 #login-title {
-  float: right;
   margin-top: 70px;
   margin-right: 0px;
-  
-  h2 {
-    font-size: 36px;
-    color: #278069;
-    margin-bottom: 0;
-  }
-}
-
-#login-form-section {
-  padding: 0;
 }
 
 #login-form {
-  margin-top: 36px;
-  font-size: 18px;
   margin-bottom: 100px;
-  background-color: white;
-  border: 2px solid #2cdba8;
-  box-shadow: 1px 1px 10px #278069;
-  border-radius: 8px;
-  min-height: 200px;
 }
 
 
+/**** 'Forgot password' page styles ****/
+#forgot-password-title {
+  margin-top: 80px;
+  margin-right: -10px;
+}
+
+#forgot-password-form {
+  margin-bottom: 200px;
+}
 
 
 /**** User page styles ****/
-#user-title-section {
-  padding: 0;
-}
 
 #user-title {
-  float: right;
   margin-top: 50px;
   margin-right: 20px;
-  
-  h2 {
-    font-size: 36px;
-    color: #278069;
-    margin-bottom: 0;
-  }
-}
-
-#user-content-section {
-  padding: 0;
 }
 
 #user-content {
-  margin-top: 36px;
-//  font-size: 18px;
   margin-bottom: 100px;
-  background-color: white;
-  border: 2px solid #2cdba8;
-  box-shadow: 1px 1px 10px #278069;
-  border-radius: 8px;
-  min-height: 200px;
-}
-
-#name-header {
-  h1 {
-    font-size: 28px;
-    margin: 0;
-  }  
-  
-  h2 {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
 }
 
 

@@ -1,0 +1,37 @@
+/*************************************
+Description: Footer styles 
+**************************************/
+
+@import 'colors';
+
+
+
+#footer {
+  margin-top: 100px;
+  padding-top: 10px;
+  background-color: $logo-tone-dark;
+  height: 100px;
+  
+  i.fa.fa-circle.footer-delimiter {
+    color: $logo-tone-light;
+    margin: 0 4px;
+  }
+}
+
+#footer-links {
+  display: inline;
+  float: left;
+  margin-bottom: 10px;
+  
+  a, a:focus, a:hover {
+    padding: 0 3px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+#footer-copyright {
+  display: inline;
+  color: $logo-tone-medium;
+  float: right;
+}

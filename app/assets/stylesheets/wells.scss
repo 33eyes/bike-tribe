@@ -17,3 +17,14 @@ Description: Wells styles
   border: 1px solid #b5e3d5;
   box-shadow: 1px 1px 3px #daf1ea;
 }
+
+
+/*** Main content well styles ***/
+.content-well {
+  margin-top: 36px;
+  background-color: white;
+  border: 2px solid $logo-tone-medium;
+  box-shadow: 1px 1px 10px $logo-tone-dark;
+  border-radius: 8px;
+  min-height: 200px;
+}

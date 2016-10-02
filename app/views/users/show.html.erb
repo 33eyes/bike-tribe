@@ -1,15 +1,15 @@
 <div class="row">
-  <div class="col-md-2" id="user-title-section">
-    <div id="user-title" class="vertical">
+  <div class="col-md-2 vertical-title-section">
+    <div id="user-title" class="vertical vertical-title">
       <% if @user == current_user %>
-        <h2>Me</h2>
+        <h1>Me</h1>
       <% end %>
     </div>
   </div>
   
   
-  <div class="col-md-8" id="user-content-section">
-    <div class="well" id="user-content">
+  <div class="col-md-8 content-section">
+    <div class="well content-well" id="user-content">
   
       <div class="row user-page-header">
         <div class="col-md-2">
@@ -30,16 +30,16 @@
         </div>
         <div class="col-md-10">
           <div id="name-header">
-            <h1>
+            <h2>
               <strong>
                 <%= @user.profile.first_name %>
                 <%= @user.profile.last_name %>
               </strong>
-            </h1>
-            <h2>
+            </h2>
+            <h3>
               Team <a href="#">Me, myself and I</a>
               in <a href="#">Boston, MA</a>
-            </h2>
+            </h3>
           </div>
           <div class="profile-menu-items">
             <%= render "dashboard" %>
