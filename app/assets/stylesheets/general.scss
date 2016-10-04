@@ -58,6 +58,13 @@ body {
 
 
 
+/**** List styles ****/
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 
 /**** Text styles ****/
 h1 {
@@ -69,6 +76,12 @@ h1 {
 h2, h3 {
   margin-top: 0;
 }
+
+// Section titles styles
+h3 {
+  color: $dark-tone-1;
+}
+
 
 // Brand-color-hued text color
 .bit-word {

@@ -1,8 +1,20 @@
+/*************************************
+Description: User views styles
+ - user show page
+ - user profile update
+ - user account update
+**************************************/
+
 @import 'colors';
 
 
+/*************************************
+ User show page
+**************************************/
 
-/* Avatar styles */
+/**** General user show page styles ****/
+
+// Avatar styles
 .user-show-avatar {
   height: 100px;
   width: 100px;
@@ -12,22 +24,21 @@
 }
 
 
-/* Section titles styles */
-h2 {
-  color: $dark-tone-1;
-}
+/**** User dashboard styles ****/
 
 
 
+/*** User profile styles ***/
 
-/*** User Profile Styles ***/
-
-/* Profile edit button */
+// Profile edit button
 .btn-edit-profile {
   float: right;
 }
 
-/* General interest item box styles */
+
+/** Interests styles **/
+
+// General interest item box styles
 .interests-container {
   margin-bottom: 3em;
 }
@@ -111,7 +122,7 @@ span.btn-save {
 }
 
 
-/* Expert-level interest item box styles */
+// Expert-level interest item box styles
 .expert-interests {
   display: inline-block;
   
@@ -134,7 +145,7 @@ span.btn-save {
   }
 }
 
-/* Intermediate-level interest item box styles */
+// Intermediate-level interest item box styles
 .intermediate-interests {
   display: inline-block;
   
@@ -158,7 +169,7 @@ span.btn-save {
 }
 
 
-/* Beginner-level interest item box styles */
+// Beginner-level interest item box styles
 .beginner-interests {
   display: inline-block;
   
@@ -183,7 +194,7 @@ span.btn-save {
 
 
 
-/* Interest item box in editing mode styles */
+// Interest item box in editing mode styles
 .interest {
   .interest-bar h4.editing-mode {
     width: 200px;
@@ -213,3 +224,24 @@ span.btn-save {
     cursor:pointer;
   }
 }
+
+
+/*************************************
+ User profile update page
+**************************************/
+
+
+/**** 'Edit user profile' page styles ****/
+textarea.form-control {
+  height: 200px;
+}
+
+.btn-profile-submit {
+  text-align: center;
+}
+
+
+
+/*************************************
+ User account update page
+**************************************/
