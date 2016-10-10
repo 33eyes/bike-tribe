@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :interests
   
   resources :contacts
+  resources :early_invites
   get '/about' => 'pages#about'
   root 'pages#home'
   

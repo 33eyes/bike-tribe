@@ -1,0 +1,13 @@
+
+<div class="hero text-center">
+  <%= image_tag("bitSpokes_logo_white_big.png") %>
+  <h2>Bike in the cloud</h2>
+  
+  <h3 id="comingsoon-tagline">A new social app for bicyclists is coming!
+  <br>Sign up for early access invite.</h3>
+  <%= form_for @early_invite, :url => { :action => "create" } do |f| %>
+    <%= f.email_field :email, :placeholder => "Enter Email", :class => "email earlyinvite" %>
+    <input class="submit earlyinvite" name="commit" type="submit" value="Request early invite" />
+  <% end %>
+  <p>We promise to never spam you.</p>
+</div>

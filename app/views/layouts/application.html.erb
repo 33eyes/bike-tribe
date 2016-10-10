@@ -45,7 +45,7 @@
           </ul>
         </div><!-- /.navbar-collapse -->  
           
-      <% else %>
+      <% elsif @coming_soon.nil? %>
         <div class="nav navbar-nav navbar-right">
           <%= link_to "Log in", new_user_session_path, class: 'btn navbar-btn', method: :get %>
         </div>

@@ -23,12 +23,17 @@ Description: Main pages styles
     color: white;
     font-size: 48px;
     letter-spacing: 4px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
   
   h3 {
     color: white;
     margin-top: 30px;
+  }
+  
+  #comingsoon-tagline {
+    color: $logo-tone-light;
   }
   
   .share-text-box {
