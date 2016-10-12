@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   resources :contacts
   resources :early_invites
   get '/about' => 'pages#about'
-  root 'pages#home'
+  
+  # Temporarily pointing root route to the 'coming soon' page
+  #root 'pages#home'
+  root 'early_invites#new'
   
   
   # The priority is based upon order of creation: first created -> highest priority.
