@@ -41,6 +41,13 @@ body {
   width:100%;
 }
 
+// Styles for mobile viewport
+@media only screen and (max-width: 480px) {
+  #bkgd-container {
+    background-size: contain;
+  }
+}
+
 
 /**** App content alignment styles ****/
 

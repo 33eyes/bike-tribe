@@ -118,6 +118,19 @@ input.submit.earlyinvite {
   box-shadow: 1px 1px 10px $logo-tone-dark;
 }
 
+// Styles for mobile viewport
+@media only screen and (max-width: 480px) {
+  .hero {
+    img {
+      width: 300px;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
+
 
 /**** 'About' page styles ****/
 
